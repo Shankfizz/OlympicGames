@@ -1,5 +1,6 @@
 package com.team.olympics.game.pingpong;
 
+import com.team.olympics.game.Game;
 import com.team.olympics.game.gender.Gender;
 
 /**
@@ -7,19 +8,10 @@ import com.team.olympics.game.gender.Gender;
  * @description the ping-pong abstract class
  * @date 2021/10/15
  */
-public abstract class PingPongGame {
-    private Gender gender;
+public abstract class PingPongGame extends Game {
     public PingPongGame(Gender gender)
     {
-        this.gender = gender;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
+        super(gender);
     }
     public abstract void show();
 

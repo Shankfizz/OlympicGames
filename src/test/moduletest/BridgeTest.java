@@ -47,7 +47,7 @@ public class BridgeTest {
                         }
                         default:
                         {
-                            System.out.println("Invalid gender gameType! Please choose again!");
+                            System.out.println("Invalid gender type! Please choose again!");
                             genderType = sc.nextInt();
                         }
                     }
@@ -77,7 +77,7 @@ public class BridgeTest {
                                 break;
                             }
                             default: {
-                                System.out.println("Invalid game gameType! Please choose again!");
+                                System.out.println("Invalid game type! Please choose again!");
                                 gameType = sc.nextInt();
                                 break;
                             }
