@@ -8,6 +8,11 @@ import com.team.olympics.watcher.GameWatcher;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Charles Gao
+ * @description the class for race game(temporarily for Observer only)
+ * @date 2021/10/18
+ */
 public class RaceGame extends Game {
     private GameState state;
     private String gameType;

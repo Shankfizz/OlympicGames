@@ -6,6 +6,11 @@ import com.team.olympics.watcher.GameWatcher;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Charles Gao
+ * @description the test code for Observer Pattern
+ * @date 2021/10/18
+ */
 public class ObserverTest {
     public static void testObserver()
     {
