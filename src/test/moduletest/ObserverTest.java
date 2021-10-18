@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2021/10/18
  */
 public class ObserverTest {
-    public static void testObserver()
+    public static void observerTest()
     {
         try
         {
@@ -44,6 +44,6 @@ public class ObserverTest {
         System.out.println("attach(): add an observer of the game");
         System.out.println("notifyAllWatcher(): notify the state changing of game to all watchers");
         System.out.println("----------------------------------------------------------------------");
-        testObserver();
+        observerTest();
     }
 }
