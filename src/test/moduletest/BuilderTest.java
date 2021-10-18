@@ -22,7 +22,7 @@ public class BuilderTest {
             boolean validType = false;
             try
             {
-                System.out.println("Please choose the groundType of the ground you want to build:[1:Field Trace, 2: Soccer Court, 3: Swimming Pool, 0:Quit]");
+                System.out.println("Please choose the type of the ground you want to build:[1:Field Trace, 2: Soccer Court, 3: Swimming Pool, 0:Quit]");
                 Scanner sc = new Scanner(System.in);
                 Scanner scString = new Scanner(System.in);
                 int groundType = sc.nextInt();
@@ -56,7 +56,7 @@ public class BuilderTest {
                             }
                             default:
                             {
-                                System.out.println("Invalid ground groundType! Please choose again!");
+                                System.out.println("Invalid ground type! Please choose again!");
                                 groundType = sc.nextInt();
                             }
                         }
@@ -91,6 +91,7 @@ public class BuilderTest {
         System.out.println("GameGround(): abstract class, constructing a game ground");
         System.out.println("Builder(): Interface, building a game ground");
         System.out.println("BuildDirector(): actually do the construction ");
+        System.out.println("-------------------------------------------------------------");
         builderTest();
     }
 

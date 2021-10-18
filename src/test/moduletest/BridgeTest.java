@@ -52,7 +52,7 @@ public class BridgeTest {
                         }
                     }
                 }
-                System.out.println("Please choose the gameType of the ping-pong game you want to watch[1:Single, 2:Dual, 3:Team, 0:Quit]:");
+                System.out.println("Please choose the type of the ping-pong game you want to watch[1:Single, 2:Dual, 3:Team, 0:Quit]:");
                 int gameType = sc.nextInt();
                     while(!validType) {
                         switch (gameType) {
@@ -98,7 +98,7 @@ public class BridgeTest {
     }
     public static void main(String[] args)
     {
-        System.out.println("-------------------- Bridge ------------------");
+        System.out.println("-------------------- Bridge -----------------------------------");
         System.out.println("Gender(): An abstract gender interface");
         System.out.println("Men(): Male gender for the game");
         System.out.println("Women(): Female gender for the game");
@@ -106,7 +106,7 @@ public class BridgeTest {
         System.out.println("PingPongSingle(): Create a single ping-pong game with certain gender");
         System.out.println("PingPongDual(): Create a dual ping-pong game with certain gender");
         System.out.println("PingPongTeam(): Create a team ping-pong game with certain gender");
-        System.out.println();
+        System.out.println("-------------------------------------------------------------");
         bridgeTest();
 
     }
