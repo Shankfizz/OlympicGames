@@ -11,6 +11,7 @@ public abstract class GameGround {
     private double size;
     private int due;
 
+    // getters&setters
     public String getType() {
         return type;
     }
@@ -44,8 +45,9 @@ public abstract class GameGround {
     public void setDue(int due) {
         this.due = due;
     }
-
+    // this is an abstract method which is implemented in the sub-classes
     public abstract void setType();
+
     public void show()
     {
         System.out.println("Type: "+ type);

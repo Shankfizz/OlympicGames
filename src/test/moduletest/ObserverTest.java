@@ -2,7 +2,7 @@ package test.moduletest;
 
 import com.team.olympics.game.fieldtrace.RaceGame;
 import com.team.olympics.game.gender.Men;
-import com.team.olympics.watcher.GameWatcher;
+import com.team.olympics.audience.Audience;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,16 +12,17 @@ import java.util.concurrent.TimeUnit;
  * @date 2021/10/18
  */
 public class ObserverTest {
+    // the test method
     public static void observerTest()
     {
         try
         {
             RaceGame game = new RaceGame(new Men(),"100m Race Final");
-            GameWatcher watcher1 = new GameWatcher("Charles", game);
-            GameWatcher watcher2 = new GameWatcher("Schweitzer",game);
+            Audience audience1 = new Audience("Charles", game);
+            Audience audience2 = new Audience("Schweitzer",game);
             game.notifyAllWatchers(); // this is not necessary in formal Observer test, I add this to keep the test logical
-            TimeUnit.SECONDS.sleep(2);
-            game.nextState();
+            TimeUnit.SECONDS.sleep(2);  // time interval to make the output clear to see
+            game.nextState();  // try to switch to the next state
             TimeUnit.SECONDS.sleep(2);
             game.nextState();
             TimeUnit.SECONDS.sleep(2);

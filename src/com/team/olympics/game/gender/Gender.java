@@ -6,5 +6,5 @@ package com.team.olympics.game.gender;
  * @date 2021/10/15
  */
 public interface Gender {
-    void show(String game);
+    void show(String game); // show the information of the game
 }

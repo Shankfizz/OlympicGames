@@ -9,11 +9,13 @@ import com.team.olympics.game.gender.Gender;
  */
 public abstract class Game {
     private Gender gender;
+    // ctor
     public Game(Gender gender)
     {
         this.gender = gender;
     }
 
+    // the getter&setter
     public Gender getGender() {
         return gender;
     }

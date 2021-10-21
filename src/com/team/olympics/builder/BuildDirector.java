@@ -7,10 +7,13 @@ package com.team.olympics.builder;
  */
 public class BuildDirector {
     private Builder builder;
+    // ctor of this class
     public BuildDirector(Builder builder)
     {
         this.builder = builder;
     }
+
+    // construct the building using the builder inside
     public void construct(String location, double size,int due)
     {
         builder.buildLocation(location);

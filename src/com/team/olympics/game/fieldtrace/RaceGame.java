@@ -3,7 +3,7 @@ package com.team.olympics.game.fieldtrace;
 import com.team.olympics.game.Game;
 import com.team.olympics.game.GameState;
 import com.team.olympics.game.gender.Gender;
-import com.team.olympics.watcher.GameWatcher;
+import com.team.olympics.audience.Audience;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +16,20 @@ import java.util.List;
 public class RaceGame extends Game {
     private GameState state;
     private String gameType;
-    private List<GameWatcher> watchers = new ArrayList<>();
+    private List<Audience> watchers = new ArrayList<>();
+
+    // ctor of the class
     public RaceGame(Gender gender, String gameType) {
         super(gender);
         this.state = GameState.NOT_STARTED;
         this.gameType = gameType;
     }
-
+    // State getter
     public GameState getState() {
         return state;
     }
 
+    // state switcher
     public void nextState()
     {
         switch (this.state)
@@ -40,6 +43,7 @@ public class RaceGame extends Game {
             {
                 this.state = GameState.FINISHED;
                 break;
+
             }
             case FINISHED:
             {
@@ -47,21 +51,24 @@ public class RaceGame extends Game {
                 return;
             }
         }
+        // notify all observers
         notifyAllWatchers();
     }
-
-    public void attach(GameWatcher watcher)
+    // attach observers to the observer list
+    public void attach(Audience audience)
     {
-        this.watchers.add(watcher);
+        this.watchers.add(audience);
     }
 
+    // update the observers
     public void notifyAllWatchers()
     {
-        for(GameWatcher watcher:watchers)
+        for(Audience watcher:watchers)
         {
             watcher.update();
         }
     }
+
     @Override
     public void show() {
         this.getGender().show(gameType);

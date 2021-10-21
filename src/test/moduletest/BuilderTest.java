@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @date 2021/10/15
  */
 public class BuilderTest {
+    // the test method
     public static void builderTest()
     {
         Builder builder = null;
@@ -22,6 +23,7 @@ public class BuilderTest {
             boolean validType = false;
             try
             {
+                // choose the ground type
                 System.out.println("Please choose the type of the ground you want to build:[1:Field Trace, 2: Soccer Court, 3: Swimming Pool, 0:Quit]");
                 Scanner sc = new Scanner(System.in);
                 Scanner scString = new Scanner(System.in);
@@ -38,7 +40,7 @@ public class BuilderTest {
                         {
                             case 1:
                             {
-                                builder = new FieldTraceBuilder();
+                                builder = new FieldTraceFieldBuilder();
                                 validType = true;
                                 break;
                             }
@@ -62,17 +64,21 @@ public class BuilderTest {
                         }
                     }
                     buildDirector = new BuildDirector(builder);
+
+                    // other inputs
                     System.out.println("Please input the location:");
                     String location = scString.nextLine();
                     System.out.println("Please input the size of the ground:");
                     double size = sc.nextDouble();
                     System.out.println("Please input the duration of the construction:");
                     int due = sc.nextInt();
+
+                    // construct this ground
                     buildDirector.construct(location,size,due);
                     GameGround ground = builder.build();
+                    // show the info
                     ground.show();
                     System.out.println();
-                    validType = false;
                 }
             }
             catch (InputMismatchException ime)

@@ -8,9 +8,11 @@ import com.team.olympics.game.pingpong.PingPongDual;
 import com.team.olympics.game.pingpong.PingPongSingle;
 import com.team.olympics.game.pingpong.PingPongTeam;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BridgeTest {
+    // test method
     public static void bridgeTest()
     {
         Gender gender=null;
@@ -19,42 +21,38 @@ public class BridgeTest {
         Scanner sc = new Scanner(System.in);
         while(testing)
         {
-            boolean validGender = false;
-            boolean validType = false;
-            System.out.println("Please choose the gender of the ping-pong game you want to watch[1:Men, 2:Women,0:Quit]:");
-            int genderType = sc.nextInt();
-            if(genderType == 0)
+            try
             {
-                testing = false;
-            }
-            else
-            {
-                while(!validGender)
-                {
-                    switch(genderType)
-                    {
-                        case 1:
-                        {
-                            gender = new Men();
-                            validGender = true;
-                            break;
-                        }
-                        case 2:
-                        {
-                            gender = new Women();
-                            validGender = true;
-                            break;
-                        }
-                        default:
-                        {
-                            System.out.println("Invalid gender type! Please choose again!");
-                            genderType = sc.nextInt();
+                boolean validGender = false;
+                boolean validType = false;
+                // selecting the gender
+                System.out.println("Please choose the gender of the ping-pong game you want to watch[1:Men, 2:Women,0:Quit]:");
+                int genderType = sc.nextInt();
+                if (genderType == 0) {
+                    testing = false;
+                } else {
+                    while (!validGender) {
+                        switch (genderType) {
+                            case 1: {
+                                gender = new Men();
+                                validGender = true;
+                                break;
+                            }
+                            case 2: {
+                                gender = new Women();
+                                validGender = true;
+                                break;
+                            }
+                            default: {
+                                System.out.println("Invalid gender type! Please choose again!");
+                                genderType = sc.nextInt();
+                            }
                         }
                     }
-                }
-                System.out.println("Please choose the type of the ping-pong game you want to watch[1:Single, 2:Dual, 3:Team, 0:Quit]:");
-                int gameType = sc.nextInt();
-                    while(!validType) {
+                    // selecting the game type
+                    System.out.println("Please choose the type of the ping-pong game you want to watch[1:Single, 2:Dual, 3:Team, 0:Quit]:");
+                    int gameType = sc.nextInt();
+                    while (!validType) {
                         switch (gameType) {
                             case 0: {
                                 validType = true;
@@ -83,15 +81,21 @@ public class BridgeTest {
                             }
                         }
                     }
-                if(pingPongGame != null)
-                {
-                    pingPongGame.show();
-                    System.out.println();
+                    // show the game
+                    if (pingPongGame != null) {
+                        pingPongGame.show();
+                        System.out.println();
+                    }
+                    pingPongGame = null;
+
+
                 }
-                pingPongGame = null;
-
-
-
+            }
+            catch (InputMismatchException ime)
+            {
+                System.out.println("Invalid input format! Ending the test...");
+                System.out.println("-------- End of Bridge Pattern testing ---------");
+                return;
             }
         }
         System.out.println("-------- End of Bridge Pattern testing ---------");

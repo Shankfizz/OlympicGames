@@ -1,4 +1,4 @@
-package com.team.olympics.watcher;
+package com.team.olympics.audience;
 
 import com.team.olympics.game.fieldtrace.RaceGame;
 
@@ -7,15 +7,16 @@ import com.team.olympics.game.fieldtrace.RaceGame;
  * @description the game watcher class
  * @date 2021/10/18
  */
-public class GameWatcher {
+public class Audience {
     private String name;
     private RaceGame game;
-
-    public GameWatcher(String name, RaceGame game) {
+    // ctor of the class
+    public Audience(String name, RaceGame game) {
         this.name = name;
         this.game = game;
         this.game.attach(this);
     }
+    // show the game and the current state of the game
     public void update()
     {
         System.out.println(this.name+" is watching:");
