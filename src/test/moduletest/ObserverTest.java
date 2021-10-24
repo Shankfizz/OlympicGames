@@ -20,7 +20,7 @@ public class ObserverTest {
             RaceGame game = new RaceGame(new Men(),"100m Race Final");
             Audience audience1 = new Audience("Charles", game);
             Audience audience2 = new Audience("Schweitzer",game);
-            game.notifyAllWatchers(); // this is not necessary in formal Observer test, I add this to keep the test logical
+            game.notifyAllAudiences(); // this is not necessary in formal Observer test, I add this to keep the test logical
             TimeUnit.SECONDS.sleep(2);  // time interval to make the output clear to see
             game.nextState();  // try to switch to the next state
             TimeUnit.SECONDS.sleep(2);

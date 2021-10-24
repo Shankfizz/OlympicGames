@@ -16,7 +16,7 @@ import java.util.List;
 public class RaceGame extends Game {
     private GameState state;
     private String gameType;
-    private List<Audience> watchers = new ArrayList<>();
+    private List<Audience> audiences = new ArrayList<>();
 
     // ctor of the class
     public RaceGame(Gender gender, String gameType) {
@@ -52,20 +52,20 @@ public class RaceGame extends Game {
             }
         }
         // notify all observers
-        notifyAllWatchers();
+        notifyAllAudiences();
     }
     // attach observers to the observer list
     public void attach(Audience audience)
     {
-        this.watchers.add(audience);
+        this.audiences.add(audience);
     }
 
     // update the observers
-    public void notifyAllWatchers()
+    public void notifyAllAudiences()
     {
-        for(Audience watcher:watchers)
+        for(Audience audience: audiences)
         {
-            watcher.update();
+            audience.update();
         }
     }
 
