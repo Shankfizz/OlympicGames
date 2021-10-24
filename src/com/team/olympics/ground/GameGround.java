@@ -1,5 +1,13 @@
 package com.team.olympics.ground;
 
+import com.team.olympics.facility.broadcast.Broadcast;
+import com.team.olympics.facility.emergencyexit.EmergencyExit;
+import com.team.olympics.facility.light.Light;
+import com.team.olympics.person.staff.safeguardstaff.SafeguardStaff;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Charles Gao
  * @description the base class for all game grounds
@@ -10,6 +18,41 @@ public abstract class GameGround {
     private String location;
     private double size;
     private int due;
+    private List<SafeguardStaff> safeguardStaffs;
+    private Light lights;
+    private Broadcast broadcast;
+    private List<EmergencyExit> emergencyExits;
+
+
+    public void init(){
+        broadcast = new Broadcast();
+        lights = new Light();
+        safeguardStaffs = new ArrayList<>();
+        SafeguardStaff safeguardStaff1 = new SafeguardStaff();
+        safeguardStaff1.setStaffid(1);
+        SafeguardStaff safeguardStaff2 = new SafeguardStaff();
+        safeguardStaff2.setStaffid(2);
+        SafeguardStaff safeguardStaff3 = new SafeguardStaff();
+        safeguardStaff3.setStaffid(3);
+        SafeguardStaff safeguardStaff4 = new SafeguardStaff();
+        safeguardStaff4.setStaffid(4);
+        SafeguardStaff safeguardStaff5 = new SafeguardStaff();
+        safeguardStaff5.setStaffid(5);
+        safeguardStaffs.add(safeguardStaff1);
+        safeguardStaffs.add(safeguardStaff2);
+        safeguardStaffs.add(safeguardStaff3);
+        safeguardStaffs.add(safeguardStaff4);
+        safeguardStaffs.add(safeguardStaff5);
+
+        emergencyExits = new ArrayList<>();
+        EmergencyExit emergencyExit1 = new EmergencyExit();
+        emergencyExit1.setExitid(1);
+        EmergencyExit emergencyExit2 = new EmergencyExit();
+        emergencyExit2.setExitid(2);
+        emergencyExits.add(emergencyExit1);
+        emergencyExits.add(emergencyExit2);
+    }
+
 
     // getters&setters
     public String getType() {
@@ -45,6 +88,39 @@ public abstract class GameGround {
     public void setDue(int due) {
         this.due = due;
     }
+
+    public List<SafeguardStaff> getSafeguardStaffs() {
+        return safeguardStaffs;
+    }
+
+    public void setSafeguardStaffs(List<SafeguardStaff> safeguardStaffs) {
+        this.safeguardStaffs = safeguardStaffs;
+    }
+
+    public Light getLights() {
+        return lights;
+    }
+
+    public void setLights(Light lights) {
+        this.lights = lights;
+    }
+
+    public Broadcast getBroadcast() {
+        return broadcast;
+    }
+
+    public void setBroadcast(Broadcast broadcast) {
+        this.broadcast = broadcast;
+    }
+
+    public List<EmergencyExit> getEmergencyExits() {
+        return emergencyExits;
+    }
+
+    public void setEmergencyExits(List<EmergencyExit> emergencyExits) {
+        this.emergencyExits = emergencyExits;
+    }
+
     // this is an abstract method which is implemented in the sub-classes
     public abstract void setType();
 
