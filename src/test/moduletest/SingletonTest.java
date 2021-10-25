@@ -9,7 +9,7 @@ import com.team.olympics.organizingcommittee.OrganizingCommittee;
  */
 public class SingletonTest {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println("--------------------------- Singleton ---------------------------------");
         System.out.println("OrganizingCommittee : getInstance() :create an instance of organnizing committee if there is none.");
         System.out.println("");
