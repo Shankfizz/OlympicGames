@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <beans>
-    <bean>
-
+    <bean id="Player1" class="main.java.com.team.olympics.player.Player">
+        <attribute key="name" value="Ma Long"/>
+        <attribute key="playGame"/>
     </bean>
 </beans>

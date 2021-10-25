@@ -8,10 +8,13 @@ package com.team.olympics.player;
 public class Player {
     private String name;
     private String playGame;
+    private String nation;
 
-    public Player(String name, String playGame) {
+    public Player(){}
+    public Player(String name, String playGame,String nation) {
         this.name = name;
         this.playGame = playGame;
+        this.nation = nation;
     }
 
     public String getName() {
@@ -28,5 +31,13 @@ public class Player {
 
     public void setPlayGame(String playGame) {
         this.playGame = playGame;
+    }
+
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
     }
 }
