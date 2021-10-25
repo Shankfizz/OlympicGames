@@ -10,6 +10,7 @@ import com.team.olympics.ground.GameGround;
 
 public class FieldTraceFieldBuilder implements Builder{
     private GameGround ground = new FieldTraceField();
+    // implementations of the interface(Field Trace Field)
     @Override
     public void buildType() {
         ground.setType();

@@ -26,7 +26,7 @@ public class EmergencyManagement {
         System.out.println("正在进行广播准备...");
         emergencyGround.getBroadcast().setMessageType("emergency");
         emergencyGround.getBroadcast().startBroadcast();
-        System.out.println("");
+        System.out.println();
 
     }
     public void checkEmergencyExits(){
@@ -34,13 +34,13 @@ public class EmergencyManagement {
         for(EmergencyExit emergencyExit :emergencyGround.getEmergencyExits()){
             emergencyExit.check();
         }
-        System.out.println("");
+        System.out.println();
     }
     public void setEmergencyLight(){
         System.out.println("正在进行灯光调整...");
         emergencyGround.getLights().setType("emergency");
         emergencyGround.getLights().changeLight();
-        System.out.println("");
+        System.out.println();
 
     }
     public void guideCrowds(){
@@ -48,7 +48,7 @@ public class EmergencyManagement {
         for(SafeguardStaff safeguardStaff :emergencyGround.getSafeguardStaffs()){
             safeguardStaff.guideCrowd();
         }
-        System.out.println("");
+        System.out.println();
 
     }
 

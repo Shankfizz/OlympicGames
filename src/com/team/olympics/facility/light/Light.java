@@ -15,7 +15,7 @@ public class Light extends Facility {
     }
 
     public void changeLight(){
-        if(type == "emergency"){
+        if(type.equals("emergency")){
             System.out.println("场馆内灯光已调整为紧急情况引导指示灯。");
         }
     }

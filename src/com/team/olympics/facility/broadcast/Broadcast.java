@@ -27,7 +27,7 @@ public class Broadcast extends Facility {
     }
 
     public void startBroadcast(){
-        if(messageType=="emergency"){
+        if(messageType.equals("emergency")){
             setMessage("紧急广播：目前场馆内出现紧急状况，请尽快在灯光引导下从离您最近的安全通道撤离，如遇困难请及时向场馆内的安保人员寻求帮助，谢谢配合！");
             System.out.println(message);
         }

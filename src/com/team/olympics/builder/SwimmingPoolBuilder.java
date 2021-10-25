@@ -9,6 +9,7 @@ import com.team.olympics.ground.SwimmingPool;
  */
 public class SwimmingPoolBuilder implements Builder{
     private GameGround ground = new SwimmingPool();
+    // implementations of the interface(Swimming Pool)
     @Override
     public void buildType() {
         ground.setType();

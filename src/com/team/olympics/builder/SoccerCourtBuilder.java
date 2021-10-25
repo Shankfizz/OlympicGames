@@ -9,6 +9,7 @@ import com.team.olympics.ground.SoccerCourt;
  */
 public class SoccerCourtBuilder implements Builder {
     private GameGround ground = new SoccerCourt();
+    // implementations of the interface(Soccer Court)
     @Override
     public void buildType() {
         ground.setType();

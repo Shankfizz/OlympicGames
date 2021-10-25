@@ -18,18 +18,25 @@ public class RaceGame extends Game {
     private String gameType;
     private List<Audience> audiences = new ArrayList<>();
 
-    // ctor of the class
+    /**
+     * ctor of the class
+     * @param gender the gender type of the game
+     * @param gameType the type of the game
+     */
     public RaceGame(Gender gender, String gameType) {
         super(gender);
         this.state = GameState.NOT_STARTED;
         this.gameType = gameType;
     }
-    // State getter
+
+    // state getter
     public GameState getState() {
         return state;
     }
 
-    // state switcher
+    /**
+     * switch the state
+     */
     public void nextState()
     {
         switch (this.state)
@@ -54,13 +61,19 @@ public class RaceGame extends Game {
         // notify all observers
         notifyAllAudiences();
     }
-    // attach observers to the observer list
+
+    /**
+     * attach observers to the observer list
+     * @param audience the audience
+     */
     public void attach(Audience audience)
     {
         this.audiences.add(audience);
     }
 
-    // update the observers
+    /**
+     * update the observers
+     */
     public void notifyAllAudiences()
     {
         for(Audience audience: audiences)
