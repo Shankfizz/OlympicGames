@@ -8,6 +8,7 @@ import com.team.olympics.organizingcommittee.OrganizingCommittee;
 import com.team.olympics.facility.facade.EmergencyManagement;
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -47,21 +48,28 @@ public class FacadeTest {
         System.out.println("----------------------------------------------------------------------");
         Scanner scanner = new Scanner(System.in);
         int i;
-        while (true)
+        try
         {
-            System.out.println("请选择发生紧急状况的场馆[1:FieldTrace | 2:SoccerCourt | 3:SwimmingPool] | 4:退出");
+            while (true)
+            {
+                System.out.println("请选择发生紧急状况的场馆[1:FieldTrace | 2:SoccerCourt | 3:SwimmingPool] | 4:退出");
 
-            i = scanner.nextInt();
-        if(i == 1)
-            facadeTest(FieldTraceField.getInstance());
-        else if(i == 2)
-            facadeTest(SoccerCourt.getInstance());
-        else if(i == 3)
-            facadeTest(SwimmingPool.getInstance());
-        else if(i == 4)
-            break;
-        else
-            System.out.print("输入的数字无效，");}
+                i = scanner.nextInt();
+                if(i == 1)
+                    facadeTest(FieldTraceField.getInstance());
+                else if(i == 2)
+                    facadeTest(SoccerCourt.getInstance());
+                else if(i == 3)
+                    facadeTest(SwimmingPool.getInstance());
+                else if(i == 4)
+                    break;
+                else
+                    System.out.print("输入的数字无效，");}
+        }
+        catch (InputMismatchException ime)
+        {
+            System.out.println("Invalid input format, Ending the test...");
+        }
         System.out.println("-------- End of Facade Pattern testing ---------");
 
 
