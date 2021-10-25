@@ -5,7 +5,7 @@ package com.team.olympics.player;
  * @description the player class(shall be abstract and extended in the future) temporarily used in IoC Pattern
  * @date 2021/10/25
  */
-public class Player {
+public abstract class Player {
     private String name;
     private String playGame;
     private String nation;
