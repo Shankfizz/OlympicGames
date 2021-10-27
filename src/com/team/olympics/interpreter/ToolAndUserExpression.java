@@ -1,9 +1,9 @@
 package com.team.olympics.interpreter;
 
 /**
- * @author: Yifan Li
- * @description: ToolAndUserExpression
- * @create: 2021/10/27
+ * @author Yifan Li
+ * @description ToolAndUserExpression
+ * @create 2021/10/27
  **/
 public class ToolAndUserExpression implements Expression{
 
@@ -23,7 +23,7 @@ public class ToolAndUserExpression implements Expression{
 
     @Override
     public boolean interpret(String info) {
-        String content[] = info.split("使用");
+        String[] content = info.split("使用");
         try{
             return user.interpret(content[0])&&tools.interpret(content[1]);
         }catch (ArrayIndexOutOfBoundsException e)

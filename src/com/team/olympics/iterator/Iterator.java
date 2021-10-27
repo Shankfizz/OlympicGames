@@ -4,15 +4,15 @@ package com.team.olympics.iterator;
 import com.team.olympics.facility.Facility;
 
 /**
- * @author: Yifan Li
- * @description: Expression interface
- * @create: 2021/10/26
+ * @author Yifan Li
+ * @description Expression interface
+ * @create 2021/10/26
  **/
 public interface Iterator {
 
-    public Facility first();
+    Facility first();
 
-    public Facility next();
+    Facility next();
 
-    public boolean hasNext();
+    boolean hasNext();
 }

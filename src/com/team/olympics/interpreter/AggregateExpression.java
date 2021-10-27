@@ -5,18 +5,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author: Yifan Li
- * @description: AggregateExpression
- * @create: 2021/10/27
+ * @author Yifan Li
+ * @description AggregateExpression
+ * @create 2021/10/27
  **/
 public class AggregateExpression implements Expression {
 
-    private Set<String> set = new HashSet<String>();
+    private Set<String> set = new HashSet<>();
 
     public AggregateExpression(Set<String> setParam) {
-        for (String element : setParam) {
-            set.add(element);
-        }
+        set.addAll(setParam);
     }
 
 
@@ -39,12 +37,7 @@ public class AggregateExpression implements Expression {
     @Override
     public boolean interpret(String info) {
 
-        if (set.contains(info)) {
-            return true;
-
-        }
-
-        return false;
+        return set.contains(info);
     }
 }
 
