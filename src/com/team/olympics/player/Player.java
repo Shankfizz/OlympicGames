@@ -5,16 +5,19 @@ package com.team.olympics.player;
  * @description the player class(shall be abstract and extended in the future) temporarily used in IoC Pattern
  * @date 2021/10/25
  */
-public abstract class Player {
+public class Player {
     private String name;
-    private String playGame;
+    private String gender;
     private String nation;
+    private String playGame;
 
     public Player(){}
-    public Player(String name, String playGame,String nation) {
+    public Player(String name, String gender,String nation,String playGame) {
         this.name = name;
-        this.playGame = playGame;
+        this.gender=gender;
         this.nation = nation;
+        this.playGame = playGame;
+
     }
 
     public String getName() {
@@ -23,6 +26,14 @@ public abstract class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getPlayGame() {
@@ -39,5 +50,15 @@ public abstract class Player {
 
     public void setNation(String nation) {
         this.nation = nation;
+    }
+
+
+    public void showDI()
+    {
+        System.out.println("Name: "+this.name);
+        System.out.println("Gender: "+this.gender);
+        System.out.println("Nation: "+this.nation);
+        System.out.println("Playing: "+this.playGame);
+        System.out.println();
     }
 }

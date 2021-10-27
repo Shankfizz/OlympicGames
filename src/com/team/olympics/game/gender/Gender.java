@@ -7,4 +7,5 @@ package com.team.olympics.game.gender;
  */
 public interface Gender {
     void show(String game); // show the information of the game
+    String getGender();
 }
