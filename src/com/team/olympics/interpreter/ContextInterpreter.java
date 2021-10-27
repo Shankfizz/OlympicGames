@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author: Yifan Li
- * @description: ContextInterpreter, the context of the interpreter pattern.
- * @create: 2021/10/27
+ * @author Yifan Li
+ * @description ContextInterpreter, the context of the interpreter pattern.
+ * @create 2021/10/27
  **/
 public class ContextInterpreter {
 
@@ -17,9 +17,9 @@ public class ContextInterpreter {
     private Set<String> essentialUser = new HashSet<>();
     private Set<String> essentialTools = new HashSet<>();
     //SimpleAction Expression
-    private Expression simpleUseAction = null;
+    private Expression simpleUseAction;
     //EssentialAction Expression
-    private Expression essentialUseAction = null;
+    private Expression essentialUseAction;
 
     public ContextInterpreter() {
         simpleUseAction = new ToolAndUserExpression();
