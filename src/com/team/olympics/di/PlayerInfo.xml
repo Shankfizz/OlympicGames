@@ -1,12 +1,12 @@
 <beans>
-    <bean id="Player1" class="com.team.olympics.player.Player">
+    <bean id="Player1" class="com.team.olympics.player.DIPlayer">
         <attribute key="name" value="Sun Yingsha"/>
         <attribute key="gender" value="Woman"/>
         <attribute key="nation" value="China"/>
         <attribute key="playGame" value="Ping-pong"/>
 
     </bean>
-    <bean id="Player2" class="com.team.olympics.player.Player">
+    <bean id="Player2" class="com.team.olympics.player.DIPlayer">
         <attribute key="name" value="Usain Bolt"/>
         <attribute key="gender" value="Man"/>
         <attribute key="nation" value="Jamaica"/>

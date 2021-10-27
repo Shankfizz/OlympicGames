@@ -1,6 +1,6 @@
 package com.team.olympics.di;
 
-import com.team.olympics.player.Player;
+import com.team.olympics.player.DIPlayer;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -146,12 +146,12 @@ public class SetterInjection
             System.out.println("Exception on reflection! Exiting the test...");
         }
     }
-    public List<Player> getAllPlayers()
+    public List<DIPlayer> getAllPlayers()
     {
-        List<Player> ret = new ArrayList<>();
+        List<DIPlayer> ret = new ArrayList<>();
         for(String key:this.beans.keySet())
         {
-            ret.add((Player) this.beans.get(key));
+            ret.add((DIPlayer) this.beans.get(key));
         }
         return ret;
     }

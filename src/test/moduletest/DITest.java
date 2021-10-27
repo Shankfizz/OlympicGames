@@ -1,7 +1,7 @@
 package test.moduletest;
 
 import com.team.olympics.di.SetterInjection;
-import com.team.olympics.player.Player;
+import com.team.olympics.player.DIPlayer;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class DITest {
     public static void diTest()
     {
-        List<Player> players = new SetterInjection("src/com/team/olympics/di/PlayerInfo.xml").getAllPlayers();
+        List<DIPlayer> players = new SetterInjection("src/com/team/olympics/di/PlayerInfo.xml").getAllPlayers();
         for(int i = players.size()-1;i>=0;i--)
         {
             System.out.println("Player "+(players.size()-i));
