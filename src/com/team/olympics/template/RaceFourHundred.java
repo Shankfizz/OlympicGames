@@ -51,7 +51,7 @@ public class RaceFourHundred extends Race{
     }
     public static void PauseRandomTime(){
         try {
-            Thread.sleep( (int)(Math.random()*3000));
+            Thread.sleep( (int)(Math.random()*1500));
         } catch (Exception e){
             System.exit( 0 ); //退出程序
         }
