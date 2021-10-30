@@ -6,6 +6,10 @@ public class SafeguardStaff extends Staff {
 
     private int staffid;
 
+    public SafeguardStaff(String name, int age, Sex sex) {
+        super(name, age, sex);
+    }
+
     public int getStaffid() {
         return staffid;
     }
