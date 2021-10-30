@@ -23,8 +23,8 @@ public class OrganizingCommittee {
         emergencyManagement = e;
 
     }
-    public void broadcasetEmergencyMessage(){
-        emergencyManagement.broadcasetEmergencyMessage();
+    public void broadcastEmergencyMessage(){
+        emergencyManagement.broadcastEmergencyMessage();
     }
     public void checkEmergencyExits(){
         emergencyManagement.checkEmergencyExits();

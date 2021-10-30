@@ -8,6 +8,9 @@ import com.team.olympics.person.staff.safeguardstaff.SafeguardStaff;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.team.olympics.person.Person.Sex.FEMALE;
+import static com.team.olympics.person.Person.Sex.MALE;
+
 /**
  * @author Charles Gao
  * @description the base class for all game grounds
@@ -28,15 +31,15 @@ public abstract class GameGround {
         broadcast = new Broadcast();
         lights = new Light();
         safeguardStaffs = new ArrayList<>();
-        SafeguardStaff safeguardStaff1 = new SafeguardStaff();
+        SafeguardStaff safeguardStaff1 = new SafeguardStaff("Alex",20,MALE);
         safeguardStaff1.setStaffid(1);
-        SafeguardStaff safeguardStaff2 = new SafeguardStaff();
+        SafeguardStaff safeguardStaff2 = new SafeguardStaff("Bob",21,MALE);
         safeguardStaff2.setStaffid(2);
-        SafeguardStaff safeguardStaff3 = new SafeguardStaff();
+        SafeguardStaff safeguardStaff3 = new SafeguardStaff("Cindy",22,FEMALE);
         safeguardStaff3.setStaffid(3);
-        SafeguardStaff safeguardStaff4 = new SafeguardStaff();
+        SafeguardStaff safeguardStaff4 = new SafeguardStaff("David",23,MALE);
         safeguardStaff4.setStaffid(4);
-        SafeguardStaff safeguardStaff5 = new SafeguardStaff();
+        SafeguardStaff safeguardStaff5 = new SafeguardStaff("Eric",24,MALE);
         safeguardStaff5.setStaffid(5);
         safeguardStaffs.add(safeguardStaff1);
         safeguardStaffs.add(safeguardStaff2);

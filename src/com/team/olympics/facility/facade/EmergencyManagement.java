@@ -17,7 +17,7 @@ public class EmergencyManagement {
         this.emergencyGround = emergencyGround;
     }
 
-    public void broadcasetEmergencyMessage(){
+    public void broadcastEmergencyMessage(){
         System.out.println("正在进行广播准备...");
         emergencyGround.getBroadcast().setMessageType("emergency");
         emergencyGround.getBroadcast().startBroadcast();

@@ -29,7 +29,7 @@ public class FacadeTest {
         OrganizingCommittee organizingCommittee = new OrganizingCommittee();
         EmergencyManagement emergencyManagement = new EmergencyManagement(emergencyGround);
         organizingCommittee.setEmergencyManagement(emergencyManagement);
-        organizingCommittee.broadcasetEmergencyMessage();
+        organizingCommittee.broadcastEmergencyMessage();
         organizingCommittee.setEmergencyLight();
         organizingCommittee.checkEmergencyExits();
         organizingCommittee.guideCrowds();
