@@ -6,4 +6,9 @@ public class Men implements Gender{
     public void show(String game) {
         System.out.println(game+": Men");
     }
+
+    @Override
+    public String getGender() {
+        return "Man";
+    }
 }

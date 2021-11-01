@@ -38,7 +38,7 @@ public class ObserverTest {
     public static void main(String[] args)
     {
         System.out.println("--------------------------- Observer ---------------------------------");
-        System.out.println("RaceGame(): Another game type for Observer Pattern");
+        System.out.println("RaceGame(): A game type for Observer Pattern");
         System.out.println("GameState(): Enumerate class for state changing");
         System.out.println("GameWatcher(): the observers for the game");
         System.out.println("update(): output the state of the game");

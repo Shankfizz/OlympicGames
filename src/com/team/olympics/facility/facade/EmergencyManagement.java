@@ -1,13 +1,8 @@
 package com.team.olympics.facility.facade;
 
-import com.team.olympics.facility.Facility;
-import com.team.olympics.facility.broadcast.Broadcast;
 import com.team.olympics.facility.emergencyexit.EmergencyExit;
-import com.team.olympics.facility.light.Light;
 import com.team.olympics.ground.GameGround;
 import com.team.olympics.person.staff.safeguardstaff.SafeguardStaff;
-
-import java.util.List;
 
 /**
  * @author Hejing Cai
@@ -22,7 +17,7 @@ public class EmergencyManagement {
         this.emergencyGround = emergencyGround;
     }
 
-    public void broadcasetEmergencyMessage(){
+    public void broadcastEmergencyMessage(){
         System.out.println("正在进行广播准备...");
         emergencyGround.getBroadcast().setMessageType("emergency");
         emergencyGround.getBroadcast().startBroadcast();

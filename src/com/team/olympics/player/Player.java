@@ -1,13 +1,16 @@
 package com.team.olympics.player;
 
+
 import com.team.olympics.Status.*;
 
+import com.team.olympics.game.gender.Gender;
+
+
 /**
- * @author Charles Gao
- * @description the player class(shall be abstract and extended in the future) temporarily used in IoC Pattern
- * @date 2021/10/25
+ * Please fill in this Player class
  */
 public abstract class Player {
+
     private String name;
     private String playGame;
     private String nation;
@@ -46,5 +49,6 @@ public abstract class Player {
     public void setNation(String nation) {
         this.nation = nation;
     }
+
 
 }
