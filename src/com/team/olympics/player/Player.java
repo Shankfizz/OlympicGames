@@ -1,5 +1,7 @@
 package com.team.olympics.player;
 
+import com.team.olympics.Status.*;
+
 /**
  * @author Charles Gao
  * @description the player class(shall be abstract and extended in the future) temporarily used in IoC Pattern
@@ -9,8 +11,12 @@ public abstract class Player {
     private String name;
     private String playGame;
     private String nation;
+    private Status currentStatus,DieStatus,WeakStatus,TiredStatus,CommonStatus,StrongStatus;
+    private int StatusNum;
 
-    public Player(){}
+    public Player(){
+
+    }
     public Player(String name, String playGame,String nation) {
         this.name = name;
         this.playGame = playGame;
@@ -40,4 +46,5 @@ public abstract class Player {
     public void setNation(String nation) {
         this.nation = nation;
     }
+
 }
